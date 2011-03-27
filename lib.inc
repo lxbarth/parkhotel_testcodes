@@ -25,7 +25,7 @@ function generate_code($date) {
   $result = '<table class="codes"><tr class="header">';
   $result .= '<th></th>';
   for ($i = 0; $i < 3; $i++) {
-    $result .= '<th>' . date('Y-m-d', strtotime($date) + 86400 * i) . '</th>';
+    $result .= '<th>' . date('Y-m-d', strtotime($date) + 86400 * $i) . '</th>';
   }
   $result .= '</tr>';
 
