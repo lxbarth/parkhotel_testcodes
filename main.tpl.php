@@ -8,14 +8,14 @@
   <script src='jquery-ui-1.8.11.custom.min.js'></script>
   <script>
   	$(function() {
-  		$("#datepicker").datepicker();
+      $("#datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
   	});
   </script>
 </head>
 <body id="home">
 <div class="datum-wrapper">
 <div class="datum">
-  <h2>Start datum:</h2>
+  <h2>Start datum</h2>
   <form action="" method="get">
     <input type="text" name="date" id="datepicker" value="<?php print $date ?>">
     <input type="submit">
@@ -25,7 +25,7 @@
 <?php if ($result):?>
 <div class="result-wrapper">
 <div class="result">
-  <h2>Codes für <?php print $date ?></h2>
+  <h2>Codes beginnend <?php print $date ?></h2>
     <?php print $result ?>
 </div>
 </div
