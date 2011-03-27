@@ -1,5 +1,4 @@
-<Files ~ "^.*\.(cs|inc)">
- Order allow,deny
+<Files ~ "^.*\.(cs|inc)$">
  Deny from all
  Satisfy All
 </Files>
