@@ -12,7 +12,7 @@ function handle_request() {
 }
 
 function generate_code($date) {
-  include_once 'parkhotel_codegenerator/codegenerator.php';
+  include_once 'parkhotel_codegenerator/codegenerator.inc';
   list($year, $month, $day) = explode('-', $date);
   $codes = array();
   for ($station = 21; $station <= 25; $station++) {
