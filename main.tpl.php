@@ -12,7 +12,6 @@
   	});
   </script>
 </head>
-
 <body id="home">
 <h1>Parkhotel codes</h1>
 <form action="" method="get">
