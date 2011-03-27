@@ -13,16 +13,22 @@
   </script>
 </head>
 <body id="home">
-<h1>Parkhotel codes</h1>
-<form action="" method="get">
-  <label for="date">Start datum</label>
-  <input type="text" name="date" id="datepicker">
-  <input type="submit">
-</form>
-<?php if ($result):?>
-<div class="result">
-  <?php print $result ?>
+<div class="datum-wrapper">
+<div class="datum">
+  <h2>Start datum:</h2>
+  <form action="" method="get">
+    <input type="text" name="date" id="datepicker" value="<?php $date ?>">
+    <input type="submit">
+  </form>
 </div>
+</div>
+<?php if ($result):?>
+<div class="result-wrapper">
+<div class="result">
+  <h2>Codes für <?php $date ?></h2>
+    <?php print $result ?>
+</div>
+</div
 <? endif; ?>
 </body>
 </html>

@@ -1,0 +1,23 @@
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial';
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.datum-wrapper {
+  float: left;
+  width: 20%;
+}
+
+.result-wrapper {
+  float: right;
+  width: 80%;
+  background-color: #eeeeee;
+}
+
+.datum,
+.result {
+  padding: 20px;
+}
