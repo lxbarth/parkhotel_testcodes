@@ -17,7 +17,7 @@
 <div class="datum">
   <h2>Start datum:</h2>
   <form action="" method="get">
-    <input type="text" name="date" id="datepicker" value="<?php $date ?>">
+    <input type="text" name="date" id="datepicker" value="<?php print $date ?>">
     <input type="submit">
   </form>
 </div>
@@ -25,7 +25,7 @@
 <?php if ($result):?>
 <div class="result-wrapper">
 <div class="result">
-  <h2>Codes für <?php $date ?></h2>
+  <h2>Codes für <?php print $date ?></h2>
     <?php print $result ?>
 </div>
 </div

@@ -13,14 +13,14 @@ function handle_request() {
 
 function generate_code($date) {
   return array(
+    'result' => 'results',
     'date' => $date,
-    'result' => 'results'
   );
 }
 
 function render_template($template_file, $variables) {
-  extract($variables, EXTR_SKIP);               // Extract the variables to a local namespace
-  ob_start();                                   // Start output buffering
-  include $template_file;   // Include the template file
-  return ob_get_clean();                        // End buffering and return its contents
+  extract($variables, EXTR_SKIP);
+  ob_start();
+  include $template_file;
+  return ob_get_clean();
 }
