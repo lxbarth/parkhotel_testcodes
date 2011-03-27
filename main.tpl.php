@@ -17,20 +17,20 @@
   </script>
 </head>
 <body id="home">
-<div class="datum-wrapper">
-<div class="datum">
-  <h2>Start datum</h2>
-  <form action="" method="get">
-    <input type="text" name="date" id="datepicker" value="<?php print $date ?>">
-  </form>
+<div class="main">
+  <div class="datum-wrapper">
+    <div class="datum">
+    <h2>Start Datum:</h2>
+    <form action="" method="get">
+      <input type="text" name="date" id="datepicker" value="<?php print $date ?>" class="date">
+    </form>
+    </div>
+  </div>
+  <?php if ($result):?>
+    <div class="result">
+      <?php print $result ?>
+    </div>
+  <? endif; ?>
 </div>
-</div>
-<?php if ($result):?>
-<div class="result-wrapper">
-<div class="result">
-    <?php print $result ?>
-</div>
-</div
-<? endif; ?>
 </body>
 </html>

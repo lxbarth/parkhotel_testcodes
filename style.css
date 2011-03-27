@@ -1,23 +1,93 @@
 
-body {
+body, input {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial';
   font-size: 20px;
   margin: 0;
   padding: 0;
 }
 
+h1, h2, h3, h4, h5 { padding: 0; margin: 0;}
+
+input {
+  margin: 10px 0;
+  border: 1px solid #000;
+  }
+  input.date {
+    width: 230px;
+    }
 .datum-wrapper {
   float: left;
-  width: 20%;
-}
+  width: 270px;
+  margin-left: -270px;
+  }
 
-.result-wrapper {
-  float: right;
-  width: 80%;
+.main {
+  margin-left: 270px;
   background-color: #eeeeee;
-}
+  }
 
 .datum,
 .result {
   padding: 20px;
-}
+  }
+
+/* Table: general */
+table {
+  margin-top: 2px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 75%;
+  }
+  td, th {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    }
+  tr.header > * {
+    border-bottom: 1px solid #000;
+    }
+  th {
+    text-align: left;
+    }
+
+/* Table: codes */
+table.codes td,
+table.codes th {
+  padding: 10px;
+  }
+td.station {
+  font-weight: bold;
+  vertical-align: top;
+  }
+
+/* Table: ui-datepicker-calendar */
+.ui-datepicker {
+  padding: 20px 0;
+  }
+.ui-datepicker-header {
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  }
+table.ui-datepicker-calendar th {
+  font-weight: normal;
+  }
+table.ui-datepicker-calendar td {
+  text-align: center;
+  padding: 5px;
+  }
+table.ui-datepicker-calendar a {
+  color: #666;
+  text-decoration: none;
+  }
+  .ui-datepicker-title {
+    float: right;
+    }
+  a.ui-corner-all {
+    color: #666;
+    padding: 0 5px 0 0;
+    cursor: pointer;
+    }
+  table.ui-datepicker-calendar a.ui-state-highlight {
+    color: #dd3333;
+    }
