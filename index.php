@@ -1,5 +1,5 @@
 <?php
 
-include 'lib.php';
+include 'lib.inc';
 
 handle_request();
