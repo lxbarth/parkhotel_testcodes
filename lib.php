@@ -12,8 +12,43 @@ function handle_request() {
 }
 
 function generate_code($date) {
+  include_once 'parkhotel_codegenerator/codegenerator.php';
+  list($year, $month, $day) = explode('-', $date);
+  $codes = array();
+  for ($station = 21; $station <= 25; $station++) {
+    $result .= '<table>';
+    for ($duration = 1; $duration <= 3; $duration++) {
+      $codes[$station][$duration] = generatecode($year, $month, $day, $duration, $station);
+    }
+  }
+
+  $result = '<table><tr>';
+  $result .= '<th></th>';
+  for ($i = 0; $i < 3; $i++) {
+    $result .= '<th>' . date('Y-m-d', strtotime($date) + 86400 * i) . '</th>';
+  }
+  $result .= '</tr>';
+
+  foreach ($codes as $station => $durations) {
+    foreach ($durations as $duration => $code) {
+      $result .= '<tr>';
+      if ($duration == 1) {
+        $result .= '<td rowspan="3" class="station">';
+        $result .= 'Station ' . $station;
+        $result .= '</td>';
+      }
+      for ($i = 1; $i <= 3; $i++) {
+        $result .= '<td class="code">';
+        $result .= ($i <= $duration) ? $code : '&ndash;';
+        $result .= '</td>';
+      }
+      $result .= '</tr>';
+    }
+  }
+  $result .= '</table>';
+
   return array(
-    'result' => 'results',
+    'result' => $result,
     'date' => $date,
   );
 }
