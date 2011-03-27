@@ -9,6 +9,10 @@
   <script>
   	$(function() {
       $("#datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
+      $("#datepicker").change(function() {
+        console.log('submit');
+        $('form').submit();
+      });
   	});
   </script>
 </head>
@@ -18,14 +22,12 @@
   <h2>Start datum</h2>
   <form action="" method="get">
     <input type="text" name="date" id="datepicker" value="<?php print $date ?>">
-    <input type="submit">
   </form>
 </div>
 </div>
 <?php if ($result):?>
 <div class="result-wrapper">
 <div class="result">
-  <h2>Codes beginnend <?php print $date ?></h2>
     <?php print $result ?>
 </div>
 </div
