@@ -15,7 +15,7 @@ function generate_code($date) {
   include_once 'parkhotel_codegenerator/codegenerator.inc';
   list($year, $month, $day) = explode('-', $date);
   $codes = array();
-  for ($station = 21; $station <= 25; $station++) {
+  for ($station = 11; $station <= 25; $station++) {
     $result .= '<table>';
     for ($duration = 1; $duration <= 3; $duration++) {
       $codes[$station][$duration] = generatecode($year, $month, $day, $duration, $station);
